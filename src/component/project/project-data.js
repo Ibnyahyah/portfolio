@@ -41,7 +41,7 @@ export const ProjectData = [
         image:"./images/malhub.jpg",
         description:"This is a company website Built with colaboration of two man team. its consist of the company details and other features.",
         stack:"Html, css, js",
-        live:"",
+        live:"https://malhub.com.ng",
         source:"",
     },
 ]

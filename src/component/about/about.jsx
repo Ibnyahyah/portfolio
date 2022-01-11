@@ -2,7 +2,7 @@ import {JourneyData} from './journey-data';
 
 function About(){
     return(
-        <div className="container mt-5 mb-3">
+        <div className="container mt-5 mb-3" id="about">
             <div>
                 <h3 className="font-xxl" style={{textShadow:"1px 3px gray"}}>About</h3>
                 <p className="mt-2">I started my journey the tech industry lately around Q4 2019 where I learn my first stack (Html,css).

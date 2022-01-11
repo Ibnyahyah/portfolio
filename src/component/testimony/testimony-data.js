@@ -17,6 +17,6 @@ export const TestimonyData = [
     {
         id:4,
         name:"Sulyman kamaldeen",
-        content:"I really appericaite you team-work and talent."
+        content:"I really appereciate your team-work and talent."
     }
 ]

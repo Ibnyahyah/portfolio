@@ -12,7 +12,7 @@ render(){
     return(
         <nav className="navbar navbar-white container">
             <header className="site-title">
-                <h1>Portfolio</h1>
+                <a href="/"><img src="./Ridwanullahi's.png" style={{width:'100px', marginTop:'4px' }} alt="Ridwdanullahi Yahyah"/></a>
             </header>
             <div className="menu-icon" onClick={this.handleClick}>
                 <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}/>

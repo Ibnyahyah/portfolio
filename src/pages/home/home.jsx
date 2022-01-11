@@ -1,4 +1,5 @@
 import About from '../../component/about/about';
+import Contact from '../../component/contact/contact';
 import Footer from '../../component/footer/footer';
 import Navbar from '../../component/nav-bar/nav';
 import Project from '../../component/project/project';
@@ -15,6 +16,7 @@ const Home = () =>{
             <Technologies/>
             <About/>
             <Testimony/>
+            <Contact/>
             <Footer/>
         </div>
     )
