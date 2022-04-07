@@ -8,7 +8,7 @@ const Data = [
     bg: "#25D366",
   },
   {
-    icon: "far fa-envelope",
+    icon: "fab fa-twitter",
     text: "Twitter",
     url: "https://twitter.com/whitecode_",
     bg: "#00acee",
@@ -42,9 +42,9 @@ const Contact = () => {
       data
     );
     setRes("Your Message Was SuccessFull");
-    setTimeout(()=>{
+    setTimeout(() => {
       setContact(false);
-    },1200)
+    }, 1200);
   };
   return (
     <div className="container contact mt-2">
@@ -88,9 +88,9 @@ const Contact = () => {
                       <i
                         className={`${icon} ${bg} text-white p-1 br-full`}
                         style={{ backgroundColor: bg }}
-                      ></i>
-                    </a>{" "}
-                    Via {text}
+                      ></i>{" "}
+                      Via {text}
+                    </a>
                   </p>
                 );
               })}
