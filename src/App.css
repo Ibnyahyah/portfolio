@@ -1,70 +1,106 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-nav{
-    position:fixed;
-    top:15px;
-    left:0;
-    right:0;
+nav {
+  position: fixed;
+  top: 15px;
+  left: 0;
+  right: 0;
 }
 nav ul li {
-    margin:0 10px;
-    display:inline;
+  margin: 0 10px;
+  display: inline;
 }
-a:hover{
-    opacity: 0.5;
-    transition: 2s all ease-in-out;
+a:hover {
+  opacity: 0.5;
+  transition: 2s all ease-in-out;
 }
-  .menu-icon{
-    display: none;
-  }
-  .fa-bars{
-    color: blue;
-  }
-  
-  
-@media screen and (max-width:960px){
-.item{
+.menu-icon {
+  display: none;
+}
+.fa-bars {
+  color: blue;
+}
+.contact {
+  position: fixed;
+  top: 50%;
+  right: 4%;
+}
+.contact button {
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 3%;
+  top: 10%;
+  color: #fff;
+}
+.contact .card {
+  position: absolute;
+  /* top:10px; */
+  right: 12%;
+  bottom: 1%;
+  border-radius: 0;
+  display: flex;
+  flex: row;
+}
+.card:hover{
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.contact form{
+  display: flex;
+  flex-direction: column;
+}
+.contact form input, textarea{
+  padding: 5px;
+  outline: none;
+}
+@media screen and (max-width: 960px) {
+  .item {
     display: flex;
     flex-direction: column;
-    width:100%;
+    width: 100%;
     position: absolute;
-    top:80px;
-    left:-100%;
+    top: 80px;
+    left: -100%;
     opacity: 1;
     transition: all 0.9s ease;
-    }
-    .item.active{
+  }
+  .item.active {
     background: #fff;
-    padding-top:20px;
-    left:0;
+    padding-top: 20px;
+    left: 0;
     opacity: 1;
     transition: all 1s ease;
-    height:15vh;
+    height: 15vh;
     z-index: 1;
-    color:black;
-    }
-    .item.active li{
-      margin-top:10px;
-    }
-    .menu-icon{
+    color: black;
+  }
+  .item.active li {
+    margin-top: 10px;
+  }
+  .menu-icon {
     display: block;
-    position:absolute;
-    top:0;
+    position: absolute;
+    top: 0;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
     margin-top: -5px;
-    }
-    .fa-times{
+  }
+  .fa-times {
     font-size: 2rem;
     color: blue;
     z-index: 2;
-    }
+  }
+  .contact .card {
+    display: flex;
+    flex-direction: column;
+  }
 }

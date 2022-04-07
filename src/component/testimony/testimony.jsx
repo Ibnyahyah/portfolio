@@ -2,8 +2,8 @@ import {TestimonyData} from './testimony-data';
 
 function Testimony(){
     return(
-        <div className="container mt-5 mb-3 bg-gray-light-9">
-            <div>
+        <div className="mt-3 mb-3 bg-gray-light-9 pt-3 pb-3">
+            <div className='container'>
                 <h3 className="font-xxl" style={{textShadow:"1px 3px gray"}}>Testimony</h3>
                 <p className="mt-1">Among what people talk about me:</p>
                 <div className="row mt-3  gap-1">
