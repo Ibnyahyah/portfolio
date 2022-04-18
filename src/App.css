@@ -70,6 +70,9 @@ textarea {
 .card-container img {
   border-radius: 5px;
 }
+#project .project-link {
+  color: blue;
+}
 
 @media screen and (max-width: 960px) {
   .item {

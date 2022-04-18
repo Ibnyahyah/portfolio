@@ -37,15 +37,22 @@ function Project() {
 
 function Projects() {
   return (
-    <div className="container" id="project">
-      <div className="mb-1">
-        <h2 className="font-xxl" style={{ textShadow: "1px 3px gray" }}>
-          Projects
-        </h2>
-        <p>Below are some website have worked on.</p>
+    <>
+      <div className="container" id="project">
+        <div className="mb-1">
+          <h2 className="font-xxl" style={{ textShadow: "1px 3px gray" }}>
+            Projects
+          </h2>
+          <p>Below are some website have worked on.</p>
+        </div>
+        <Project />
       </div>
-      <Project />
-    </div>
+      <div className="project-link text-center mt-2 text-blue">
+        <a href="http://github.com/ibnyahyah" target="_blank" rel="noreferrer">
+          View More
+        </a>
+      </div>
+    </>
   );
 }
 export default Projects;
