@@ -49,22 +49,26 @@ a:hover {
   display: flex;
   flex: row;
 }
-.card:hover{
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+.card:hover {
+  box-shadow: 2px 20px 40px rgba(0, 0, 0, 0.2);
 }
-.contact form div{
+.contact form div {
   display: flex;
   flex-direction: column;
 }
-.contact form input, textarea{
+.contact form input,
+textarea {
   padding: 5px;
   outline: none;
 }
-.contact form button{
+.contact form button {
   padding: 5px;
   border: none;
   margin-top: 10px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.3);
+}
+.card-container img {
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 960px) {
