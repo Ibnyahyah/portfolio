@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #353535;
 }
 
 a {
@@ -13,4 +14,204 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.navbar {
+  background-color: #454545;
+}
+span,
+.active {
+  color: #00ff00;
+}
+.top-content h3 {
+  /* font-family: "Open Sans"; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+}
+.top-content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+}
+.top-content button,
+.card form button {
+  background-color: #009c00;
+}
+.services {
+  background-color: #f6f4f4;
+  position: relative;
+  overflow: hidden;
+}
+.services h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 84px;
+}
+.services .content {
+  width: 70%;
+  margin: auto;
+}
+.services .card {
+  width: 90%;
+  margin: auto;
+}
+.services .card p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  width: 76%;
+  margin: auto;
+}
+.services-design {
+  position: absolute;
+  width: 184px;
+  height: 200px;
+  background: #009c00;
+}
+.services-design.a {
+  left: -10%;
+  top: -78px;
+  transform: rotate(122.58deg);
+}
+.services-design.b {
+  top: 87%;
+  right: -10%;
+  bottom: -100px;
+  transform: rotate(28.08deg);
+}
+.container.skills h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+}
+.container.skills h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+}
+.skills-per {
+  width: 100%;
+}
+.skills-per div {
+  background-color: #009c00;
+}
+.skills-per .HTML,
+.CSS,
+.Bootstrap {
+  width: 90%;
+}
+.skills-per .JavaScript {
+  width: 75%;
+}
+.skills-per .ReactJS {
+  width: 85%;
+}
+.skills-per .NextJS,
+.TypeScript {
+  width: 60%;
+}
+.skills-per .JQuery {
+  width: 85%;
+}
+.contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(140, 139, 139, 0.3)),
+    url(../public/background.png), no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+.contact header h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+}
+.contact header h4 {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+}
+.contact .card {
+  width: 50%;
+  margin: auto;
+}
+.contact .card form label {
+  font-weight: 600;
+}
+.contact .card form input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border: 1px solid #353535;
+  border-radius: 5px;
+}
+footer .header-section {
+  border-right: 4px solid #fff;
+}
+footer li img {
+  width: 20px;
+  margin-right: 5px;
+}
+footer li {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .top-content h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .top-content p {
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .skills-per-container {
+    width: 93vw;
+  }
+  .services-design.a {
+    left: -130px;
+    top: -78px;
+    transform: rotate(122.58deg);
+  }
+  .services-design.b {
+    top: 94%;
+    right: -130px;
+    bottom: -100px;
+    transform: rotate(28.08deg);
+  }
+  .contact header h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .contact header h4 {
+    font-size: 22px;
+  }
+  .contact .card {
+    width: 98%;
+    margin: auto;
+  }
+  footer .header-section {
+    border-right: none;
+  }
+  footer .header-section .div {
+    min-height: 5vh !important;
+    margin-top: 30px;
+  }
+  footer ul {
+    margin-left: 0px !important;
+  }
 }

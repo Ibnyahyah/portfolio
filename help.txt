@@ -1,0 +1,7 @@
+Get Banks
+
+https://merchant.birrionapi.com/api/get-banks
+
+Merchant information
+
+https://merchant.birrionapi.com/api/merchant-info
