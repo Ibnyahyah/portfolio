@@ -17,10 +17,26 @@ a {
 }
 .navbar {
   background-color: #454545;
+  position: sticky;
+  top: 0;
+}
+.menuIcon {
+  display: none;
 }
 span,
 .active {
   color: #00ff00;
+}
+.about-image-container {
+  width: 100%;
+}
+.top-image-container {
+  width: 80%;
+  margin: auto;
+}
+.top-image-container img {
+  width: 70%;
+  margin: auto;
 }
 .top-content h3 {
   /* font-family: "Open Sans"; */
@@ -36,7 +52,9 @@ span,
   line-height: 26px;
 }
 .top-content button,
-.card form button {
+.card form button,
+.blog button,
+.NewsLetter form button {
   background-color: #009c00;
 }
 .services {
@@ -50,7 +68,10 @@ span,
   font-size: 45px;
   line-height: 84px;
 }
-.services .content {
+.services .content,
+.portfolio,
+.blog,
+.NewsLetter .container {
   width: 70%;
   margin: auto;
 }
@@ -156,6 +177,95 @@ textarea {
   border: 1px solid #353535;
   border-radius: 5px;
 }
+
+.page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(140, 139, 139, 0.3)),
+    url(../public/background.png), no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 30vh;
+  padding-bottom: 50px;
+}
+.about .content p,
+.portfolio p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+.portfolio a {
+  font-size: 20px;
+  color: #009c00;
+  text-decoration: underline;
+}
+.drop-down {
+  position: relative;
+}
+.drop-down .drop-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  top: -10px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(234, 234, 234, 0.2);
+  z-index: 1;
+  border: 5px solid #009c00;
+  font-size: 18px;
+}
+.drop-down:hover .drop-content {
+  display: block;
+}
+.blog h4 {
+  font-size: 28px;
+}
+.blog a {
+  float: right;
+  color: #009c00;
+}
+.NewsLetter {
+  background-color: #f6f4f4;
+}
+.NewsLetter h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.NewsLetter form {
+  width: 100%;
+}
+.NewsLetter form input {
+  width: 80%;
+  padding: 20px;
+}
+.NewsLetter form button {
+  width: 20%;
+  padding: 22px;
+}
+.blog-post .blog {
+  width: 85% !important;
+}
+.blog-post header h1 {
+  font-size: 50px;
+  width: 80%;
+}
+.blog-post h2 {
+  font-size: 30px;
+}
+.blog-post p {
+  font-size: 25px;
+}
+.blog-post button {
+  background-color: dodgerblue;
+  padding: 3px 5px;
+}
+.example-code {
+  overflow: auto;
+}
+.example-code pre code {
+  display: flex;
+  flex-direction: column;
+}
+
 footer .header-section {
   border-right: 4px solid #fff;
 }
@@ -169,9 +279,37 @@ footer li {
 }
 
 @media screen and (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+  ul.menu-active {
+    transition: 1s ease-in-out 3s;
+    display: block !important;
+    position: absolute;
+    top: 80px;
+    background-color: #454545;
+    width: 85%;
+    margin-left: 0px !important;
+  }
+  ul.menu-active li {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .top-image-container,
+  .about-image-container {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .top-image-container img,
+  .about-image-container img {
+    width: 100%;
+    margin: auto;
+  }
   .top-content h3 {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 20px;
   }
   .top-content p {
     font-size: 17px;
@@ -200,9 +338,44 @@ footer li {
   .contact header h4 {
     font-size: 22px;
   }
-  .contact .card {
+  .contact .card,
+  .portfolio,
+  .blog,
+  .NewsLetter .container {
     width: 98%;
     margin: auto;
+  }
+  .NewsLetter h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .NewsLetter form div {
+    display: flex;
+    flex-direction: column;
+  }
+  .NewsLetter form input,
+  .NewsLetter form button {
+    width: 100%;
+  }
+  .blog-post .blog {
+    width: 98% !important;
+  }
+  .blog-post header h1 {
+    font-size: 30px;
+    width: 98%;
+    margin-left: 10px;
+  }
+  .blog-post header p {
+    margin-left: 10px;
+  }
+  .blog-post h2 {
+    font-size: 24px;
+  }
+  .blog-post p {
+    font-size: 18px;
+  }
+  .example-code {
+    width: 100%;
   }
   footer .header-section {
     border-right: none;
@@ -213,5 +386,6 @@ footer li {
   }
   footer ul {
     margin-left: 0px !important;
+    padding-left: 0px !important;
   }
 }

@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { Data, SkillData } from "../components/dummy-data";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
@@ -15,7 +14,7 @@ type DataProps = {
   }[];
 };
 
-const Home: NextPage = () => {
+const Home: NextPage = (props: any) => {
   return (
     <div>
       <Head>
@@ -36,7 +35,7 @@ const Home: NextPage = () => {
         <section>
           <div className="container">
             <div
-              className="row align-items-center"
+              className="row align-items-center justify-content-space-between"
               style={{ minHeight: "80vh" }}
             >
               <div className="col-6-sm col-6-md col-6-lg col-6-xl">
@@ -47,14 +46,26 @@ const Home: NextPage = () => {
                   </h3>
                   <p>
                     I offer Professional services to get your projects done
-                    promptly and perfectly
+                    promptly and perfectly. We build and develop perfect web
+                    applications, and decentralized apps, and connect our
+                    clients to the ideal UI/UX designer.
                   </p>
-                  <button className="btn mt-2 br-sm" title="Click to Hire me">
-                    Hire Me Now
-                  </button>
+                  <a
+                    href="http://twitter.com/whitecoode"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="btn mt-2 br-sm" title="Click to Hire me">
+                      Hire Me Now
+                    </button>
+                  </a>
                 </div>
               </div>
-              <div className="col-6-sm col-6-md col-6-lg col-6-xl"></div>
+              <div className="col-6-sm col-6-md col-6-lg col-6-xl">
+                <div className="top-image-container">
+                  <img src="./myassets/whitecoode.png" alt="whitecoode" />
+                </div>
+              </div>
             </div>
           </div>
           <div className="services pt-5 pb-5">
@@ -62,7 +73,7 @@ const Home: NextPage = () => {
             <div className="services-design b"></div>
             <div className="content">
               <h1 className="text-center mb-1">Services</h1>
-              <Services data={Data} />
+              <Services data={props.data} />
             </div>
           </div>
           <div className="bg-white p-3"></div>
@@ -71,7 +82,7 @@ const Home: NextPage = () => {
               <h1 className="mb-1">SKILLS</h1>
               <h4>Below are my soft skills:</h4>
             </header>
-            <Skills data={SkillData} />
+            <Skills data={props.skillData} />
           </div>
           <div className="bg-white p-3"></div>
           <div className="contact">
@@ -110,3 +121,12 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      skillData: SkillData,
+      data: Data,
+    },
+  };
+}

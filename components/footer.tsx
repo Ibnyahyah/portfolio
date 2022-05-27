@@ -1,7 +1,17 @@
 import Link from "next/link";
 import React from "react";
+// type PropsType = {
+//   portfolio: boolean;
+//   about: boolean;
+// };
 
-export default function Footer() {
+export default function Footer({
+  portfolio,
+  about,
+  blog,
+  newsLetter,
+  blogPost,
+}: any) {
   return (
     <footer className="container text-white">
       <div className="row">
@@ -32,40 +42,52 @@ export default function Footer() {
               <h3>Contact Me</h3>
             </li>
             <li>
-              <Link
+              <a
                 href="https://github.com/ibnyahyah"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <div className="display-f align-items-center">
-                  <img src="./icons/github-fill.png" alt="" />
+                  {blogPost ? (
+                    <img src="../icons/github-fill.png" alt="" />
+                  ) : (
+                    <img src="./icons/github-fill.png" alt="" />
+                  )}
                   <p>@Ibnyahyah</p>
                 </div>
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                href="mailto:yahyahridwan665@gmail.com"
+              <a
+                href="mailto:info.whitecoode@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <div className="display-f align-items-center">
-                  <img src="./icons/mail-filled.png" alt="" />
-                  <p>yahyahridwan665@gmail.com</p>
+                  {blogPost ? (
+                    <img src="../icons/mail-filled.png" alt="" />
+                  ) : (
+                    <img src="./icons/mail-filled.png" alt="" />
+                  )}
+                  <p>info.whitecoode@gmail.com</p>
                 </div>
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
                 href="telto:08129418741"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <div className="display-f align-items-center">
-                  <img src="./icons/phone-filled.png" alt="" />
+                  {blogPost ? (
+                    <img src="../icons/phone-filled.png" alt="" />
+                  ) : (
+                    <img src="./icons/phone-filled.png" alt="" />
+                  )}
                   <p>08129418741</p>
                 </div>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -74,20 +96,40 @@ export default function Footer() {
             <li className="font-regular mb-1">
               <h3>Quick Links</h3>
             </li>
-            <li>
-              <Link href="">Home</Link>
+            <li
+              className={`${
+                about || portfolio || blog || newsLetter ? "active" : null
+              }`}
+            >
+              <Link href="/">Home</Link>
             </li>
-            <li className="active">
-              <Link href="">About</Link>
+            <li
+              className={`${
+                portfolio || !about || blog || newsLetter ? "active" : null
+              }`}
+            >
+              <Link href="/about">About</Link>
             </li>
-            <li className="active">
-              <Link href="">Portfolio</Link>
+            <li
+              className={`${
+                !portfolio || about || blog || newsLetter ? "active" : null
+              }`}
+            >
+              <Link href="/portfolio">Portfolio</Link>
             </li>
-            <li className="active">
-              <Link href="">Blog</Link>
+            <li
+              className={`${
+                portfolio || about || !blog || newsLetter ? "active" : null
+              }`}
+            >
+              <Link href="/blog">Blog</Link>
             </li>
-            <li className="active">
-              <Link href="">Newsletter</Link>
+            <li
+              className={`${
+                portfolio || about || blog || !newsLetter ? "active" : null
+              }`}
+            >
+              <Link href="/newsLetter">Newsletter</Link>
             </li>
           </ul>
         </div>
