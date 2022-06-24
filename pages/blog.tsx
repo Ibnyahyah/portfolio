@@ -18,7 +18,7 @@ const Blog: NextPage = (props: any) => {
         />
         <link
           rel="stylesheet"
-          href="https://white-ui.whitecoode.com/w29h4i1t87e4-u1icss/s0he98et(css)/whiteuicss.min.css"
+          href="https://cdn.jsdelivr.net/npm/white-uicss@1.0.3/white-uicss.min.css"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -41,7 +41,14 @@ const Blog: NextPage = (props: any) => {
         <div className="blog container pt-3 pb-5 text-white">
           <Blogs data={props.blogData} />
           <div className="text-center mt-1">
-            <button className="btn br-deffault">View all</button>
+            <button
+              className="btn br-deffault"
+              onClick={() => {
+                window.location.href = "https://medium.com/@whitecoode";
+              }}
+            >
+              View all
+            </button>
           </div>
         </div>
         <div className="bg-white p-3"></div>

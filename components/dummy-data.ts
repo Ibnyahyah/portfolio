@@ -28,35 +28,44 @@ export const Data = [
 export const SkillData = [
   {
     header: "HTML",
-    performance: 90,
-  },
-  {
-    header: "CSS",
-    performance: 90,
+    image: "../stacks/Html.png",
+    content: "Proficient in the use of HTML in web.",
+    margin: "mt-2 mb-1",
   },
   {
     header: "JavaScript",
-    performance: 75,
+    image: "../stacks/javascript.png",
+    content: "Well-grounded knowlegde of Javascript",
+  },
+  {
+    header: "CSS",
+    image: "../stacks/css.png",
+    content: "Proficient in the use of CSS in web styling",
   },
   {
     header: "Bootstrap",
-    performance: 90,
+    image: "../stacks/bootstrap.png",
+    content: "Well-versed in the use of Bootstrap",
   },
   {
     header: "ReactJS",
-    performance: 80,
+    image: "../stacks/reactjs.png",
+    content: "Proficient in the use of ReactJs.",
   },
   {
     header: "NextJS",
-    performance: 60,
+    image: "../stacks/nextjs.png",
+    content: "Well-versed in the use of NextJS.",
   },
   {
     header: "TypeScript",
-    performance: 60,
+    image: "../stacks/typescript.png",
+    content: "Well-versed in the use of Typescript.",
   },
   {
     header: "JQuery",
-    performance: 85,
+    image: "../stacks/jquery.png",
+    content: "Proficient in the use of JQuery in web animations.",
   },
 ];
 export const PortfolioData = [

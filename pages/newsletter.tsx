@@ -1,11 +1,25 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { json } from "node:stream/consumers";
 import React from "react";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
 const NewsLetter: NextPage = () => {
+  const [subscribe, setsubscribe] = React.useState(false);
+  const [email, setEmail] = React.useState("");
+
+  const emaildata = { email: email.toLowerCase() };
+  const handleSubscriber = async (e: any) => {
+    e.preventDefault();
+    fetch("https://white-uicss-default-rtdb.firebaseio.com/subscribers.json", {
+      method: "POST",
+      body: JSON.stringify(emaildata),
+    });
+    setsubscribe(true);
+  };
+
   return (
     <div>
       <Head>
@@ -16,7 +30,7 @@ const NewsLetter: NextPage = () => {
         />
         <link
           rel="stylesheet"
-          href="https://white-ui.whitecoode.com/w29h4i1t87e4-u1icss/s0he98et(css)/whiteuicss.min.css"
+          href="https://cdn.jsdelivr.net/npm/white-uicss@1.0.3/white-uicss.min.css"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -42,15 +56,29 @@ const NewsLetter: NextPage = () => {
               <h2>Subscribe to my Newsletter</h2>
               <p className="mt-1">For exclusive coding tips</p>
             </header>
-            <form>
-              <label htmlFor="email">
-                Enter your email:
-                <div className="display-f align-items-center mt-2">
-                  <input type="email" placeholder="Enter your email:" />
-                  <button className="btn text-white">Subscribe</button>
-                </div>
-              </label>
-            </form>
+            {subscribe ? (
+              <p className="text-center text-secondary">
+                You Have Successfully Subscribe to my Newsletter
+              </p>
+            ) : (
+              <form onSubmit={handleSubscriber}>
+                <label htmlFor="email">
+                  Enter your email:
+                  <div className="display-f align-items-center mt-2">
+                    <input
+                      type="email"
+                      placeholder="Enter your email:"
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                      }}
+                    />
+                    <button className="btn text-white" type="submit">
+                      Subscribe
+                    </button>
+                  </div>
+                </label>
+              </form>
+            )}
             <div className="mt-5">
               <h3 className="font-regular mb-3">We can also connect on:</h3>
               <div className="row gap-1 m-auto">

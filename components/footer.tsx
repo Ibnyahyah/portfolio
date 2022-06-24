@@ -59,7 +59,7 @@ export default function Footer({
             </li>
             <li>
               <a
-                href="mailto:info.whitecoode@gmail.com"
+                href="mailto:wcode7458@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >

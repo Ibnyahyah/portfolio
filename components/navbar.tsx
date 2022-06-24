@@ -58,7 +58,7 @@ export default function Navbar({
               !about && portfolio && !blog && !newsLetter ? "active" : null
             }`}
           >
-            <Link href="/portfolio" passHref>
+            <Link href="/portfolio">
               Portfolio
             </Link>
           </li>

@@ -16,7 +16,7 @@ const About: NextPage = () => {
         />
         <link
           rel="stylesheet"
-          href="https://white-ui.whitecoode.com/w29h4i1t87e4-u1icss/s0he98et(css)/whiteuicss.min.css"
+          href="https://cdn.jsdelivr.net/npm/white-uicss@1.0.3/white-uicss.min.css"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

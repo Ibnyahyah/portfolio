@@ -19,6 +19,7 @@ a {
   background-color: #454545;
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 .menuIcon {
   display: none;
@@ -105,6 +106,10 @@ span,
   bottom: -100px;
   transform: rotate(28.08deg);
 }
+.container.skills {
+  width: 70%;
+  margin: auto;
+}
 .container.skills h1 {
   font-style: normal;
   font-weight: 700;
@@ -117,29 +122,26 @@ span,
   font-size: 22px;
   line-height: 32px;
 }
-.skills-per {
-  width: 100%;
-}
-.skills-per div {
+.skills .card {
   background-color: #009c00;
+  min-height: calc(200px - 20px);
+  border: none !important;
 }
-.skills-per .HTML,
-.CSS,
-.Bootstrap {
-  width: 90%;
+img.skills-image {
+  width: 100px !important;
 }
-.skills-per .JavaScript {
-  width: 75%;
+.Bootstrap,
+.JavaScript,
+.NextJS,
+.JQuery {
+  background-color: white !important;
+  color: #009c00 !important;
 }
-.skills-per .ReactJS {
-  width: 85%;
-}
-.skills-per .NextJS,
-.TypeScript {
-  width: 60%;
-}
-.skills-per .JQuery {
-  width: 85%;
+.Bootstrap p,
+.JavaScript p,
+.NextJS p,
+.JQuery p {
+  color: black !important;
 }
 .contact {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(140, 139, 139, 0.3)),
@@ -282,14 +284,18 @@ footer li {
   .menuIcon {
     display: block;
   }
+  .navbar ul {
+    display: none !important;
+    transition: all 5s;
+  }
   ul.menu-active {
-    transition: 1s ease-in-out 3s;
     display: block !important;
     position: absolute;
     top: 80px;
+    left: 10px;
     background-color: #454545;
-    width: 85%;
-    margin-left: 0px !important;
+    width: 95%;
+    margin-left: 0 !important;
   }
   ul.menu-active li {
     margin-top: 30px;
@@ -315,9 +321,6 @@ footer li {
     font-size: 17px;
     line-height: 26px;
   }
-  .skills-per-container {
-    width: 93vw;
-  }
   .services-design.a {
     left: -130px;
     top: -78px;
@@ -328,6 +331,9 @@ footer li {
     right: -130px;
     bottom: -100px;
     transform: rotate(28.08deg);
+  }
+  .skills .card {
+    min-height: 200px;
   }
   .contact header h1 {
     font-style: normal;

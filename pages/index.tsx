@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useState } from "react";
 import { Data, SkillData } from "../components/dummy-data";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
@@ -15,6 +16,24 @@ type DataProps = {
 };
 
 const Home: NextPage = (props: any) => {
+  const [contact, setcontact] = useState(false);
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [message, setmessage] = useState("");
+
+  const data = {
+    name: name,
+    email: email,
+    message: message,
+  };
+  const contactHandle = async (e: any) => {
+    e.preventDefault();
+    fetch("https://white-uicss-default-rtdb.firebaseio.com/contact.json", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+    setcontact(true);
+  };
   return (
     <div>
       <Head>
@@ -25,7 +44,7 @@ const Home: NextPage = (props: any) => {
         />
         <link
           rel="stylesheet"
-          href="https://white-ui.whitecoode.com/w29h4i1t87e4-u1icss/s0he98et(css)/whiteuicss.min.css"
+          href="https://cdn.jsdelivr.net/npm/white-uicss@1.0.3/white-uicss.min.css"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -92,22 +111,51 @@ const Home: NextPage = (props: any) => {
                 <h4>Fill the form below to tell me more:</h4>
               </header>
               <div className="card bg-white">
-                <form>
-                  <label htmlFor="name">
-                    Name:
-                    <input type="text" id="name" />
-                  </label>
-                  <label htmlFor="email">
-                    Email:
-                    <input type="email" id="email" />
-                  </label>
-                  <label htmlFor="message">
-                    Message:
-                    <textarea id="message" cols={30} rows={10}></textarea>
-                  </label>
-                  <div className="text-center">
-                    <button className="btn br-sm text-white">Contact Me</button>
-                  </div>
+                <form onSubmit={contactHandle}>
+                  {contact ? (
+                    <p className="text-center pt-5 pb-5 text-secondary">
+                      Your have been successfully sent.
+                    </p>
+                  ) : (
+                    <>
+                      <label htmlFor="name">
+                        Name:
+                        <input
+                          type="text"
+                          onChange={(e) => {
+                            setname(e.target.value);
+                          }}
+                          id="name"
+                        />
+                      </label>
+                      <label htmlFor="email">
+                        Email:
+                        <input
+                          type="email"
+                          onChange={(e) => {
+                            setemail(e.target.value);
+                          }}
+                          id="email"
+                        />
+                      </label>
+                      <label htmlFor="message">
+                        Message:
+                        <textarea
+                          id="message"
+                          onChange={(e) => {
+                            setmessage(e.target.value);
+                          }}
+                          cols={30}
+                          rows={10}
+                        ></textarea>
+                      </label>
+                      <div className="text-center">
+                        <button className="btn br-sm text-white">
+                          Contact Me
+                        </button>
+                      </div>
+                    </>
+                  )}
                 </form>
               </div>
             </div>
